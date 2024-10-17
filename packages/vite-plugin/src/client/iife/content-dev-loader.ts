@@ -5,11 +5,16 @@ const injectTime = performance.now()
 ;(async () => {
   // remember, __PREAMBLE__ and __CLIENT__ are emitted files
   if (__PREAMBLE__)
-    await import(/* @vite-ignore */ chrome.runtime.getURL(__PREAMBLE__))
-  await import(/* @vite-ignore */ chrome.runtime.getURL(__CLIENT__))
-  const { onExecute } = await import(/* @vite-ignore */ chrome.runtime.getURL(__SCRIPT__)) as ContentScriptAPI.ModuleExports
+    await import(/* @vite-ignore */ getExtensionResourceUrl(__PREAMBLE__))
+  await import(/* @vite-ignore */ getExtensionResourceUrl(__CLIENT__))
+  const { onExecute } = await import(/* @vite-ignore */ getExtensionResourceUrl(__SCRIPT__)) as ContentScriptAPI.ModuleExports
   // this is the entry point of the content script, it will run each time this script is injected
   onExecute?.({ perf: { injectTime, loadTime: performance.now() - injectTime } })
 })().catch(console.error)
+
+function getExtensionResourceUrl(path: string) {
+  // replacing chrome.runtime.getURL due to an issue introduced in Chrome 130 update
+  return `chrome-extension://${chrome.runtime.id}/${path}`;
+}
 
 export {}

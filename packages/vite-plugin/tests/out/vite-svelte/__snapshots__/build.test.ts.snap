@@ -216,10 +216,13 @@ exports[`build fs output > assets/content.js-loader.hash.js 1`] = `
   (async () => {
     const { onExecute } = await import(
       /* @vite-ignore */
-      chrome.runtime.getURL(\\"assets/content.js.hash.js\\")
+      getExtensionResourceUrl(\\"assets/content.js.hash.js\\")
     );
     onExecute?.({ perf: { injectTime, loadTime: performance.now() - injectTime } });
   })().catch(console.error);
+  function getExtensionResourceUrl(path) {
+    return \`chrome-extension://\${chrome.runtime.id}/\${path}\`;
+  }
 
 })();
 "

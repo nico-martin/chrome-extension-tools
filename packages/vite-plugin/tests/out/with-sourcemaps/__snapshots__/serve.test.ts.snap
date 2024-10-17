@@ -142,18 +142,21 @@ exports[`serve fs output > src/content.ts-loader.js 1`] = `
     if (\\"\\")
       await import(
         /* @vite-ignore */
-        chrome.runtime.getURL(\\"\\")
+        getExtensionResourceUrl(\\"\\")
       );
     await import(
       /* @vite-ignore */
-      chrome.runtime.getURL(\\"vendor/vite-client.js\\")
+      getExtensionResourceUrl(\\"vendor/vite-client.js\\")
     );
     const { onExecute } = await import(
       /* @vite-ignore */
-      chrome.runtime.getURL(\\"src/content.ts.js\\")
+      getExtensionResourceUrl(\\"src/content.ts.js\\")
     );
     onExecute?.({ perf: { injectTime, loadTime: performance.now() - injectTime } });
   })().catch(console.error);
+  function getExtensionResourceUrl(path) {
+    return \`chrome-extension://\${chrome.runtime.id}/\${path}\`;
+  }
 
 })();
 "

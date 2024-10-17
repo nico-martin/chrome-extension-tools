@@ -90,10 +90,13 @@ exports[`build fs output > assets/declared-script.ts-loader.hash0.js 1`] = `
   (async () => {
     const { onExecute } = await import(
       /* @vite-ignore */
-      chrome.runtime.getURL(\\"assets/declared-script.ts.hash1.js\\")
+      getExtensionResourceUrl(\\"assets/declared-script.ts.hash1.js\\")
     );
     onExecute?.({ perf: { injectTime, loadTime: performance.now() - injectTime } });
   })().catch(console.error);
+  function getExtensionResourceUrl(path) {
+    return \`chrome-extension://\${chrome.runtime.id}/\${path}\`;
+  }
 
 })();
 "
@@ -112,10 +115,13 @@ exports[`build fs output > assets/dynamic-script.ts-loader.hash5.js 1`] = `
   (async () => {
     const { onExecute } = await import(
       /* @vite-ignore */
-      chrome.runtime.getURL(\\"assets/dynamic-script.ts.hash3.js\\")
+      getExtensionResourceUrl(\\"assets/dynamic-script.ts.hash3.js\\")
     );
     onExecute?.({ perf: { injectTime, loadTime: performance.now() - injectTime } });
   })().catch(console.error);
+  function getExtensionResourceUrl(path) {
+    return \`chrome-extension://\${chrome.runtime.id}/\${path}\`;
+  }
 
 })();
 "
