@@ -113,10 +113,13 @@ exports[`build fs output > assets/index.ts-loader.hash0.js 1`] = `
   (async () => {
     const { onExecute } = await import(
       /* @vite-ignore */
-      chrome.runtime.getURL(\\"assets/index.ts.hash7.js\\")
+      getExtensionResourceUrl(\\"assets/index.ts.hash7.js\\")
     );
     onExecute?.({ perf: { injectTime, loadTime: performance.now() - injectTime } });
   })().catch(console.error);
+  function getExtensionResourceUrl(path) {
+    return \`chrome-extension://\${chrome.runtime.id}/\${path}\`;
+  }
 
 })();
 "
@@ -130,10 +133,13 @@ exports[`build fs output > assets/index.ts-loader.hash3.js 1`] = `
   (async () => {
     const { onExecute } = await import(
       /* @vite-ignore */
-      chrome.runtime.getURL(\\"assets/index.ts.hash6.js\\")
+      getExtensionResourceUrl(\\"assets/index.ts.hash6.js\\")
     );
     onExecute?.({ perf: { injectTime, loadTime: performance.now() - injectTime } });
   })().catch(console.error);
+  function getExtensionResourceUrl(path) {
+    return \`chrome-extension://\${chrome.runtime.id}/\${path}\`;
+  }
 
 })();
 "

@@ -89,18 +89,21 @@ exports[`serve fs output > src/content1/index.ts-loader.js 1`] = `
     if (\\"\\")
       await import(
         /* @vite-ignore */
-        chrome.runtime.getURL(\\"\\")
+        getExtensionResourceUrl(\\"\\")
       );
     await import(
       /* @vite-ignore */
-      chrome.runtime.getURL(\\"vendor/vite-client.js\\")
+      getExtensionResourceUrl(\\"vendor/vite-client.js\\")
     );
     const { onExecute } = await import(
       /* @vite-ignore */
-      chrome.runtime.getURL(\\"src/content1/index.ts.js\\")
+      getExtensionResourceUrl(\\"src/content1/index.ts.js\\")
     );
     onExecute?.({ perf: { injectTime, loadTime: performance.now() - injectTime } });
   })().catch(console.error);
+  function getExtensionResourceUrl(path) {
+    return \`chrome-extension://\${chrome.runtime.id}/\${path}\`;
+  }
 
 })();
 "
@@ -131,18 +134,21 @@ exports[`serve fs output > src/content2/index.ts-loader.js 1`] = `
     if (\\"\\")
       await import(
         /* @vite-ignore */
-        chrome.runtime.getURL(\\"\\")
+        getExtensionResourceUrl(\\"\\")
       );
     await import(
       /* @vite-ignore */
-      chrome.runtime.getURL(\\"vendor/vite-client.js\\")
+      getExtensionResourceUrl(\\"vendor/vite-client.js\\")
     );
     const { onExecute } = await import(
       /* @vite-ignore */
-      chrome.runtime.getURL(\\"src/content2/index.ts.js\\")
+      getExtensionResourceUrl(\\"src/content2/index.ts.js\\")
     );
     onExecute?.({ perf: { injectTime, loadTime: performance.now() - injectTime } });
   })().catch(console.error);
+  function getExtensionResourceUrl(path) {
+    return \`chrome-extension://\${chrome.runtime.id}/\${path}\`;
+  }
 
 })();
 "
