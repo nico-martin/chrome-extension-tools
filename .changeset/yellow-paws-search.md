@@ -1,5 +1,5 @@
 ---
-'@crxjs/vite-plugin': patch
+'@nico-martin-crxjs/vite-plugin': patch
 ---
 
 Vite 5 moved vite manifest from 'manifest.json' to '.vite/manifest.json'. 

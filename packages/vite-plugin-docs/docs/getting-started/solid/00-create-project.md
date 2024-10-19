@@ -45,7 +45,7 @@ key is missing, Vite might not be able to build `vite.config.ts`.
 Now install the CRXJS Vite plugin using your favorite package manager.
 
 ```sh
-npm i @crxjs/vite-plugin@beta -D
+npm i @nico-martin-crxjs/vite-plugin@beta -D
 ```
 
 The official SolidJS templates use Vite 3, but CRXJS support for Vite 3 is
@@ -59,7 +59,7 @@ Update `vite.config.js` to match the code below.
 import { defineConfig } from 'vite'
 import solidPlugin from 'vite-plugin-solid'
 // highlight-start
-import { crx } from '@crxjs/vite-plugin'
+import { crx } from '@nico-martin-crxjs/vite-plugin'
 import manifest from './manifest.json'
 // highlight-end
 

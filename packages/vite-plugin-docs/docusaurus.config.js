@@ -68,7 +68,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://www.npmjs.com/package/@crxjs/vite-plugin',
+            href: 'https://www.npmjs.com/package/@nico-martin-crxjs/vite-plugin',
             label: 'NPM',
             position: 'right',
           },

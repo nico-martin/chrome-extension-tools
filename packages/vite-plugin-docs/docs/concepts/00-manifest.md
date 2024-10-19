@@ -27,7 +27,7 @@ The following example uses the version from `package.json` and dynamically sets
 the name depending on Vite's mode.
 
 ```typescript title=manifest.config.ts
-import { defineManifest } from '@crxjs/vite-plugin'
+import { defineManifest } from '@nico-martin-crxjs/vite-plugin'
 import packageJson from './package.json'
 const { version } = packageJson
 

@@ -1,4 +1,4 @@
-# @crxjs/vite-plugin
+# @nico-martin-crxjs/vite-plugin
 
 ## 2.0.0-beta.25
 

@@ -1,5 +1,5 @@
 ---
-"@crxjs/vite-plugin": patch
+"@nico-martin-crxjs/vite-plugin": patch
 ---
 
 fix: maintain ; and , during minification

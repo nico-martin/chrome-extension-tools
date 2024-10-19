@@ -35,7 +35,7 @@ Create `vite.config.js` with the code below.
 
 ```js title=vite.config.js
 import { defineConfig } from 'vite'
-import { crx } from '@crxjs/vite-plugin'
+import { crx } from '@nico-martin-crxjs/vite-plugin'
 import manifest from './manifest.json'
 
 export default defineConfig({

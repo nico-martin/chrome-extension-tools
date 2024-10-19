@@ -1,5 +1,5 @@
 ---
-"@crxjs/vite-plugin": patch
+"@nico-martin-crxjs/vite-plugin": patch
 ---
 
 fix: background scripts for firefox build

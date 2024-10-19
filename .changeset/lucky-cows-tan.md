@@ -1,5 +1,5 @@
 ---
-'@crxjs/vite-plugin': minor
+'@nico-martin-crxjs/vite-plugin': minor
 ---
 
 Add Svelte support

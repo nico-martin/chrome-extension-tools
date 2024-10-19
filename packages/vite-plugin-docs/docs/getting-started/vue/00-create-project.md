@@ -35,7 +35,7 @@ Update `vite.config.js` to match the code below.
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 // highlight-start
-import { crx } from '@crxjs/vite-plugin'
+import { crx } from '@nico-martin-crxjs/vite-plugin'
 import manifest from './manifest.json' // Node 14 & 16
 import manifest from './manifest.json' assert { type: 'json' } // Node >=17
 // highlight-end

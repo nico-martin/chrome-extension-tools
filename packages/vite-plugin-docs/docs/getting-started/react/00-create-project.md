@@ -28,7 +28,7 @@ Update `vite.config.js` to match the code below.
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 // highlight-start
-import { crx } from '@crxjs/vite-plugin'
+import { crx } from '@nico-martin-crxjs/vite-plugin'
 import manifest from './manifest.json'
 // highlight-end
 

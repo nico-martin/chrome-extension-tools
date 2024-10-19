@@ -1,5 +1,5 @@
 ---
-"@crxjs/vite-plugin": patch
+"@nico-martin-crxjs/vite-plugin": patch
 ---
 
 fix: filter out vite serve plugin context

@@ -1,5 +1,5 @@
 ---
-'@crxjs/vite-plugin': major
+'@nico-martin-crxjs/vite-plugin': major
 ---
 
 ## Vite 3 support and new file writer
