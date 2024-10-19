@@ -17,13 +17,18 @@ declare const __SERVER_PORT__: string
 
 /* -------- REDIRECT FETCH TO THE DEV SERVER ------- */
 
-const ownOrigin = new URL(chrome.runtime.getURL('/')).origin
+const ownOrigin = new URL(getExtensionResourceUrl('/')).origin
 self.addEventListener('fetch', (fetchEvent) => {
   const url = new URL(fetchEvent.request.url)
   if (url.origin === ownOrigin) {
     fetchEvent.respondWith(sendToServer(url))
   }
 })
+
+function getExtensionResourceUrl(path: string) {
+  // replacing chrome.runtime.getURL due to an issue introduced in Chrome 130 update
+  return `chrome-extension://${chrome.runtime.id}/${path}`;
+}
 
 /**
  * Sending extension page requests to the dev server via fetch handler.
