@@ -163,7 +163,7 @@ export const pluginWebAccessibleResources: CrxPluginFn = () => {
                     resources: [...assets, ...imports],
                     use_dynamic_url: isDynamicScript
                       ? dynamicScriptDynamicUrl
-                      : true,
+                      : false,
                   }
 
                   if (isDynamicScript || !injectCss) {

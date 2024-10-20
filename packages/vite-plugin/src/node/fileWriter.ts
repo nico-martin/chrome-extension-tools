@@ -50,10 +50,14 @@ export async function start({
   const inputOptions: RollupOptions = {
     input: 'index.html',
     ...rollupOptions,
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     plugins,
   }
   // handle the various output option types
   const rollupOutputOptions = [rollupOptions.output].flat()[0]
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const outputOptions: OutputOptions = {
     ...rollupOutputOptions,
     dir: outDir,

@@ -1,8 +1,7 @@
 # ![CRXJS](./banner-github.png)
 
-[![npm (scoped)](https://img.shields.io/npm/v/@nico-martin-crxjs/vite-plugin.svg)](https://www.npmjs.com/package/@nico-martin-crxjs/vite-plugin)
-[![GitHub last commit](https://img.shields.io/github/last-commit/crxjs/chrome-extension-tools.svg?logo=github)](https://github.com/crxjs/rollup-plugin-chrome-extension)
-![GitHub action badge](https://github.com/crxjs/chrome-extension-tools/actions/workflows/vite-plugin.yml/badge.svg)
+> This is a Fork of [github.com/crxjs/chrome-extension-tools/](https://github.com/crxjs/chrome-extension-tools/) that merged some fixes for Chrome v130+ where scripts are blocked due to Content Security Policy enforcement.  
+> Once the original project merges the required changes I do not plan to maintain this further.
 
 ## CRXJS Vite Plugin
 
@@ -18,13 +17,3 @@ CRXJS brings the Vite developer experience to Chrome Extensions:
 
 See the CRXJS documentation to
 [get started in 90 seconds 🚀](https://crxjs.dev/vite-plugin)
-
-## Supporting
-
-If these plugins have helped you ship your product faster, please consider
-[sponsoring me](https://github.com/sponsors/jacksteamdev) on GitHub.
-
-## Contributing
-
-We encourage pull requests! This is a
-[pnpm monorepo](https://pnpm.io/workspaces), so use pnpm instead of Yarn or npm.

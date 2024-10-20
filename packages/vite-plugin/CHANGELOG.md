@@ -1,4 +1,10 @@
-# @nico-martin-crxjs/vite-plugin
+# @nico-martin/crxjs-vite-plugin
+
+## 2.0.1-beta.1
+
+### Patch Changes
+
+- Fixes for scripts blocked due to Content Security Policy enforcement in Chrome v130+
 
 ## 2.0.0-beta.25
 
